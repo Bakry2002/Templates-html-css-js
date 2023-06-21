@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+:root {
+    --main-bg-color: #047aed;
+    --secondary-bg-color: #1c3fa8;
+
+    --dark-bg-color: #002240;
+    --light-bg-color: #f4f4f4;
+
+    --main-text-color: #ffffff;
+    --secondary-text-color: #333; 
+
+    --success-color: #5cb85c ;
+    --error-color: #d9534f;
+}
+/* General rules */
+
+* {
+    box-sizing: border-box;
+    padding: 0 ;
+    margin: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--secondary-text-color);
+    line-height: 1.6;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-text-color);
+}
+
+h1,
+h2 { 
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+img {
+    width: 100%;
+}
+
+code, pre {
+    background-color: #333;
+    color: var(--main-text-color);
+    padding: 10px;
+}
+
+/* navbar style  */ 
+
+.navbar {
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    height: 70px;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    color: var(--main-text-color);
+    padding: 10px;
+    margin: 0 5px;
+} 
+
+.navbar a:hover {
+    border-bottom: 2px solid var(--main-text-color);  
+}
+
+.navbar .flex {
+    justify-content: space-between;
+}
+
+/* landing section style */
+
+.landing {
+    height: 400px;
+    background-color: var(--main-bg-color); 
+    color: var(--main-text-color);
+    position: relative;
+}
+
+.landing::before,
+.landing::after {
+    content: "";
+    position: absolute;
+    height: 100px;
+    background-color: var(--main-text-color);
+    bottom: -70px;
+    left: 0;
+    right: 0;
+    -webkit-transform: skewY(-2deg);
+    -moz-transform: skewY(-2deg);
+    -ms-transform: skewY(-2deg);
+    transform: skewY(-2deg); 
+}
+
+.landing h1 {
+    font-size: 40px;
+}
+
+.landing p {
+    margin: 20px 0;
+}
+
+.landing .grid {
+    overflow: visible; /* to make the scrolling disapear and make 
+    the scrolled content appear even if it outside its container */
+    grid-template-columns: 50% 45%;
+    gap: 30px;
+}
+
+.landing .landing-text {
+    animation: slidInFromLeft 1s ease-in;
+}
+
+.landing .landing-form {
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 999;
+    justify-self: flex-end;
+    animation: slidInFromRight 1s ease-in;
+}
+
+.landing-form .form-control {
+    margin: 30px 0;
+}
+
+.landing-form .form-control input[type="text"],
+.landing-form .form-control input[type="email"] {
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+}
+
+.landing-form .form-control input:focus {
+    outline: none;
+}
+
+/* Stats style */
+
+.stats {
+    padding-top: 100px;
+    animation: slidInFromBottom 1s ease-in;
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.stats-heading {
+    max-width: 500px;
+    margin: auto;
+}
+
+.stats .grid h3 {
+    font-size: 35px;
+}
+
+.stats .grid p {
+    font-size: 20px;
+}
+
+/* Cli style */
+
+.cli .grid {
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.cli .grid > *:first-child {
+    grid-column: 1 / span 2 ; /* i have 3 columns tha i made above, 
+    i want the cil image to take 2 columns and the cards to take just one column  */
+    grid-row: 1 / span 2; /* i want the cli image to take the 2 rows i made, 
+    and the other cards everyone in single row */
+}
+
+/* cloud style */
+
+.cloud .grid {
+    grid-template-columns: 4fr 3fr;
+    
+}
+
+/* Language style */
+.languages .flex {
+    flex-wrap: wrap;
+}
+
+.languages .card {
+    text-align: center;
+    margin: 15px 10px 40px ;
+    transition: transform 0.4s ease;
+    -webkit-transition: transform 0.4s ease;
+    -moz-transition: transform 0.4s ease;
+    -ms-transition: transform 0.4s ease;
+    
+}
+
+.languages .card:hover {
+    transform: translateY(-15px);
+}
+
+.languages .card h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Features */
+
+.features-head img,
+.features-sub-head img {
+    width: 200px;
+    /* justify-self: is moving only the item itself inside a group of flex items */
+    justify-self: flex-end;
+}
+
+
+.features-sub-head img {
+    width: 300px;
+    justify-self: flex-end;
+}
+
+/* Features main style */
+
+.features-main  .card > i {
+    margin-right: 20px;
+}
+
+.features-main .grid {
+    padding: 30px;
+}
+
+.features-main .grid > *:first-child {
+    grid-column: 1 / span 3;
+}
+
+.features-main .grid > *:nth-child(2) {
+    grid-column: 1 / span 2;
+}
+
+/* Docs style */
+
+.docs-head img {
+    width: 200px;
+    justify-self: flex-end;
+}
+
+.docs-main h3 {
+    padding: 20px 0;
+}
+
+.docs-main .grid {
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+}
+
+.docs-main a.active {
+    color: var(--main-bg-color);
+}
+.docs-main a:hover {
+    font-weight: bold;
+}
+
+
+.docs-main nav li {
+    font-size: 17px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ccc ;
+}
+
+
+
+/* footer style */
+
+.footer .social-icon a {
+    margin: 0 10px;
+}
+
+/*  Animations */
+
+@keyframes slidInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slidInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slidInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slidInFromBottom {
+    0% {
+        transform: translateY(100%);
+    }
+    
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/* Tablets and under */
+
+@media (max-width: 767px) {
+    .grid, 
+    .landing .grid, 
+    .stats .grid,
+    .cli .grid, 
+    .cloud .grid,
+    .features-main .grid,
+    .docs-main .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    } 
+
+    .landing {
+        height: auto;
+    }
+
+    .landing .landing-text {
+        text-align: center;
+        margin-top: 40px;
+        animation: slidInFromTop 1s ease-in;
+    }
+
+    .landing .landing-form {
+        justify-self: center;
+        margin: auto;
+        animation: slidInFromBottom 1s ease-in;
+    }
+
+    .cli .grid > *:first-child {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .features-head,
+    .features-sub-head,
+    .docs-head {
+        text-align: center;
+    }
+
+    .features-head img,
+    .features-sub-head img,
+    .docs-head img {
+       justify-self: center;
+    }
+
+    .features-main .grid > *:first-child,
+    .features-main .grid > *:nth-child(2) {
+        grid-column: 1;
+    }
+}
+
+/*  Mobile */
+
+@media (max-width: 500px) {
+    .navbar {
+        height: 110px;
+    }
+
+    .navbar .flex {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    
+    .landing .landing-form {
+        width: 300px;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    .footer .social-icon a {
+        margin: 0 7px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
