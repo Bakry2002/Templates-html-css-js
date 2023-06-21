@@ -1,0 +1,259 @@
+/* html {
+    scroll-behavior: smooth;
+} */
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.card {
+    border-radius: 15px;
+    position: relative;
+}
+
+/* .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+} */
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/* Base button */
+
+.btn {
+    display: inline-block;
+    padding: 10px 27px;
+    cursor: pointer;
+    background-color: var(--primary-bg-color);
+    color: var(--link-text-color);
+    box-shadow: 0 8px 15px rgba(50, 82, 233, 0.3);
+    border: none;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(0.98);
+}
+
+/* Font size */
+.fs-12 {
+    font-size: 0.75em;
+}
+.fs-15 {
+    font-size: 0.9375em;
+}
+.fs-16 {
+    font-size: 1em;
+}
+.fs-18 {
+    font-size: 1.125em;
+}
+.fs-20 {
+    font-size: 1.25em;
+}
+.fs-24 {
+    font-size: 1.5em;
+}
+.fs-32 {
+    font-size: 2em;
+}
+.fs-36 {
+    font-size: 2.25em;
+}
+.fs-42 {
+    font-size: 2.625em;
+}
+
+/* Font weight */
+
+.fw-100 {
+    font-weight: 100;
+}
+.fw-200 {
+    font-weight: 200;
+}
+.fw-300 {
+    font-weight: 300;
+}
+.fw-400 {
+    font-weight: 400;
+}
+.fw-500 {
+    font-weight: 500;
+}
+.fw-600 {
+    font-weight: 600;
+}
+.fw-700 {
+    font-weight: 700;
+}
+
+/* Colors */
+
+.primary-clr {
+    color: var(--primary-color);
+}
+.sm-text-clr {
+    color: var(--sm-text-color);
+}
+.link-text-clr {
+    color: var(--link-text-color);
+}
+.primary-bg-clr {
+    color: var(--primary-bg-color);
+}
+.secondary-bg-clr {
+    color: var(--secondary-bg-color);
+}
+.increase-btn-clr {
+    color: var(--increase-btn-color);
+}
+.decrease-btn-clr {
+    color: var(--decrease-btn-color);
+}
+
+
+
+/* Margin */
+
+.my-05 {
+    margin: 0.5rem 0;
+}
+
+.my-1 { /* margin on y-axix(top, bottom)*/
+    margin: 1rem 0 ;
+} 
+
+.my-2 { /* margin on y-axix(top, bottom)*/
+    margin: 1.5rem 0 ;
+}
+
+.my-3 { /* margin on y-axix(top, bottom)*/
+    margin: 2rem 0 ;
+} 
+
+.my-4 { /* margin on y-axix(top, bottom)*/
+    margin: 3rem 0 ;
+} 
+
+.my-5 { /* margin on (top, right, bottom, left)*/
+    margin: 4rem 0;
+}
+.my-6 { /* margin on (top, right, bottom, left)*/
+    margin: 5rem 0;
+} 
+.my-7 { /* margin on (top, right, bottom, left)*/
+    margin: 6rem 0;
+}
+.my-8 {
+    margin: 9em 0;
+}
+
+.m-1 { /* margin on (top, right, bottom, left)*/
+    margin: 1rem;
+} 
+
+.m-2 { /* margin on (top, right, bottom, left)*/
+    margin: 1.5rem;
+}
+
+.m-3 { /* margin on (top, right, bottom, left)*/
+    margin: 2rem;
+} 
+
+.m-4 { /* margin on (top, right, bottom, left)*/
+    margin: 3rem;
+} 
+
+.m-5 { /* margin on (top, right, bottom, left)*/
+    margin: 4rem;
+}
+.m-6 { /* margin on (top, right, bottom, left)*/
+    margin: 5rem;
+}
+.m-7 { /* margin on (top, right, bottom, left)*/
+    margin: 6rem;
+}
+
+/* Padding */
+
+.py-1 { /* padding on y-axix(top, bottom)*/
+    padding: 1rem 0 ;
+} 
+
+.py-2 { /* padding on y-axix(top, bottom)*/
+    padding: 1.5rem 0 ;
+}
+
+.py-3 { /* padding on y-axix(top, bottom)*/
+    padding: 2rem 0 ;
+} 
+
+.py-4 { /* padding on y-axix(top, bottom)*/
+    padding: 3rem 0 ;
+} 
+
+.py-5 { /* padding on (top, right, bottom, left)*/
+    padding: 4rem 0;
+} 
+.py-6 { /* padding on (top, right, bottom, left)*/
+    padding: 5rem 0;
+} 
+.py-7 { /* padding on (top, right, bottom, left)*/
+    padding: 6rem 0;
+} 
+
+.p-1 { /* padding on (top, right, bottom, left)*/
+    padding: 1rem;
+} 
+
+.p-2 { /* padding on (top, right, bottom, left)*/
+    padding: 1.5rem;
+}
+
+.p-3 { /* padding on (top, right, bottom, left)*/
+    padding: 2rem;
+} 
+
+.p-4 { /* padding on (top, right, bottom, left)*/
+    padding: 3rem;
+} 
+
+.p-5 { /* padding on (top, right, bottom, left)*/
+    padding: 4rem;
+}
+.p-6 { /* padding on (top, right, bottom, left)*/
+    padding: 5rem;
+}
+.p-7 { /* padding on (top, right, bottom, left)*/
+    padding: 6rem;
+}
