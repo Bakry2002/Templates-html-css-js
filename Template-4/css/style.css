@@ -1,0 +1,508 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900");
+
+:root {
+
+
+}
+
+*, 
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; 
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* img {
+    width: 100%;
+    overflow: hidden;
+} */
+
+header {
+    background-image: url(../images/banner-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: #2a2a2a;
+    min-height: 925px;
+    padding-top: 30px;
+}
+
+.navbar {
+    min-height: 80px;
+    background: transparent;
+    display: flex;
+    background-color: #fff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar .nav-content  {
+    display: inline-flex;
+}
+
+.navbar .nav-content li  {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline-block;
+}
+
+.navbar .nav-content li a {
+    display: block;
+    color: #2a2a2a;
+    padding: 8px 15px;
+    text-transform: capitalize;
+    font-weight: 500;
+    border-radius: 18px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease 0s;
+}
+
+.navbar .nav-content a.active,
+.navbar .nav-content a:hover {
+    color: #fff;
+    background-color: #7453fc;
+    
+}
+
+/* Landing style  */
+
+.landing {
+    margin: 150px 0 ;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 50px;
+}
+
+.landing .text {
+    color: #fff;
+    padding: 20px;
+}
+
+.landing .text h6 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.landing .text h2 {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 66px;
+    text-transform: uppercase;
+}
+
+.landing .text p {
+    font-size: 15px;
+    line-height: 30px;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.landing .btn {
+    border-radius: 25px;
+    color: #fff;
+    padding: 13px 30px;
+    position: relative;
+    overflow: hidden;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    transition: all .3s;
+}
+
+.landing .btn::after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 50px);
+    border-bottom: 3px solid #fff;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.landing .explore {
+    background-color: transparent;
+    border: 1px solid #7453fc ;
+}
+
+.landing .explore:hover {
+    background-color: #7453fc;
+}
+
+.landing .watch {
+    background-color: #7453fc;
+    margin-left: 20px;
+}
+
+.landing .watch:hover {
+    background-color: #fff;
+    color: #7453fc;
+}
+
+.landing-image {
+    justify-self: end;
+}
+
+@media (max-width:992px) {
+    .landing {
+        grid-template-columns: 1fr;
+        margin: 50px 0;
+        gap: 0;
+    }
+
+    .landing .text {
+        margin-bottom: 10px;
+    }
+
+    .landing .text h2 {
+        font-size: 30px;
+    }
+
+    .landing .text p {
+        margin-top: 0;
+    }
+
+    .landing-image {
+        justify-self: center;
+    }
+
+    .landing-image img {
+        height: 350px;
+    }
+
+    .owl-nav {
+        margin-top:-40px;
+    }
+}
+
+@media (min-width:414px), (max-width: 680px) {
+    .landing .text h2 {
+        font-size: 25px;
+    }
+
+    .landing-image img {
+        height: 300px;
+    }
+}
+
+.owl-nav {
+    position: relative;
+}
+
+.owl-nav .owl-prev:hover,
+.owl-nav .owl-next:hover {
+    background-color: #7453fc;
+    color: #fff;
+}
+
+.owl-nav .owl-prev {
+    position: absolute;
+    right: 50%;
+    background-color: #fff;
+    color: #7453fc;
+    height: 46px;
+    border-radius: 50%;
+    width: 46px;
+    border: none;
+    line-height: 46px;
+    font-size: 20px;
+    margin: 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.owl-nav .owl-next {
+    position: absolute;
+    left: 50%;
+    background-color: #fff;
+    color: #7453fc;
+    height: 46px;
+    border-radius: 50%;
+    width: 46px;
+    border: none;
+    line-height: 46px;
+    font-size: 20px;
+    margin: 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+.dark-bg {
+    background-image: url(../images/dark-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 120px 0px 1px 0px;
+    position: relative;
+}
+
+/* Categories style */
+
+.categories {
+    margin-bottom: 150px;
+}
+
+.categories-content .icon {
+    width: 62px;
+    height: 62px;
+    line-height: 5;
+    display: inline-block;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.categories-content .icon img {
+    max-width: 31px;
+}
+
+.categories-content  h4 {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.icon-btn a {
+    position: absolute;
+    left: 50%;
+    width: 46px;
+    height: 46px;
+    line-height: 46px;
+    background-color: #fff;
+    border-radius: 50%;
+    color: #7453fc;
+    font-size: 18px;
+    bottom: -23px;
+    transform: translateX(-23px);
+    transition: all .3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.card:hover .icon-btn a {
+    opacity: 1;
+    visibility: visible;
+}
+
+.icon-btn a:hover {
+    background-color: #7453fc;
+    color: #fff;
+}
+
+/* Hot collection style */
+
+.collection {
+    margin-bottom: 150px;
+}
+
+.collection-content .box {
+    width: 320px;
+    margin-right: 30px;
+    padding-bottom: 60px;
+}
+
+.collection-content .box img {
+    display: block;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.collection-content .box .text {
+    background-color: #282b2f;
+    border: 1px solid #404245;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 30px;
+    text-transform: capitalize;
+}
+
+.collection-content .box  .text h4 {
+    color: #fff;
+    font-size: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.box .text .info-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.box .text .info-text .type {
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.box .text .info-text .type strong {
+    font-size: 20px;
+    display: block;
+    margin-top: 10px;
+}
+
+.box .text .info-text .category {
+    color: #fff;
+    display: inline-block;
+    text-align: right;
+    width: 100%;
+} 
+
+.box .text .info-text .category strong {
+    font-size: 20px;
+    display: block;
+    margin-top: 10px;
+
+} 
+
+.box .btn {
+    width: 280px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+}
+
+.box .btn:hover {
+    color:#7453fc;
+    background-color: #fff;
+}
+
+.box .btn::after {
+    content: '';
+    width: 78%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.collection .owl-nav  {
+    display: none;
+}
+
+/* Create NFT style */ 
+
+.create-nft {
+    background-image: url(../images/main-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 120px 0px;
+    position: relative;
+}
+
+.create-nft .section-heading h2 span {
+    color: #fff;
+}
+
+.create-nft .section-line {
+    margin: 0;
+    background-color: #fff;
+}
+
+.create-nft  .flex {
+    justify-content: space-between;
+}
+
+.create-nft .row .btn {
+    margin-bottom: 75px;
+}
+
+.create-nft .row .btn::after {
+    content: '';
+    width: 78%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.create-nft .row .btn:hover {
+    color: #7453fc;
+    background-color: #fff;
+}
+
+.create-nft .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.create-nft .box {
+    position: relative;
+}
+
+.create-nft .grid > *:not(:last-of-type)::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 95%;
+    background-color: rgba(255, 255, 255, 0.2);
+    top: 5%;
+    right: 5px;
+}
+.create-nft .box .number {
+    position: absolute;
+    right: 0;
+    top: -20px;
+}
+
+.create-nft .box .number h6 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.create-nft .box .icon {
+    width: 62px;
+    height: 62px;
+    line-height: 5;
+    display: inline-block;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.create-nft .box .text h3 {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.create-nft .box .text p {
+    font-size: 15px;
+    line-height: 30px;
+    color: #fff;
+    margin-right: 30px;
+}

@@ -1,0 +1,68 @@
+.container {
+    max-width: 1140px;
+    margin: 0 auto ;
+}
+
+
+.section-heading {
+    margin-top: 0;
+    margin-bottom: 80px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.section-line {
+    width: 100px;
+    height: 2px;
+    background-color: #7453fc;
+    margin: 0 auto 30px auto;
+}
+
+
+.section-heading h2 {
+    margin-top: 10px;
+    line-height: 36px;
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.section-heading h2 span {
+    color: #7453fc;
+}
+
+.card {
+    position: relative;
+    background-color: #282b2f;
+    text-align: center;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid #404245;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+
+.btn {
+    font-size: 14px;
+    color: #fff;
+    background-color: #7453fc;
+    /* border: 1px solid #7453fc; */
+    padding: 16px 30px;
+    display: inline-block;
+    border-radius: 25px;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+}
